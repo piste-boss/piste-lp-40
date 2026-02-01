@@ -756,7 +756,7 @@ img {
 
 .price-card {
     background-color: var(--white);
-    padding: 40px 20px;
+    padding: 40px 20px 20px;
     border-radius: 15px;
     border: 1px solid #e2e8f0;
     text-align: center;
@@ -766,7 +766,8 @@ img {
 }
 
 .price-card--featured {
-    border: 3px solid var(--primary-color);
+    border: 5px solid #bf953f;
+    /* ゴールド */
     transform: scale(1.05);
     z-index: 10;
     box-shadow: var(--shadow-large);
@@ -777,48 +778,76 @@ img {
     top: -15px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: var(--primary-color);
+    background-color: #bf953f;
+    /* ラベルもゴールドに */
     color: var(--white);
     padding: 2px 20px;
     border-radius: 20px;
     font-weight: 700;
 }
 
+.price .section-title {
+    font-size: 1.8rem;
+    /* タイトルを少し小さく */
+}
+
+/* Base styles for non-featured cards (Platinum, Light) */
 .price-card__tag {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
+    /* 小さく */
     color: var(--secondary-color);
-    font-weight: 700;
+    font-weight: 400;
+    /* 太字解除 */
     margin-bottom: 10px;
 }
 
 .price-card h4 {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
+    /* 小さく */
+    font-weight: 400;
+    /* 太字解除 */
     margin-bottom: 15px;
 }
 
 .price-card__cost {
-    font-size: 2.5rem;
-    font-weight: 800;
+    font-size: 1.5rem;
+    /* 小さく */
+    font-weight: 400;
+    /* 太字解除 */
     color: var(--primary-color);
     margin-bottom: 20px;
 }
 
-.price-card__cost span {
-    font-size: 1rem;
-    font-weight: 400;
+.price-card__features li {
+    padding: 8px 0;
+    border-top: 1px solid #f1f5f9;
+    font-size: 0.85rem;
+    /* 小さく */
     color: var(--text-light);
 }
 
-.price-card__features {
-    list-style: none;
-    text-align: left;
-    margin-top: auto;
+/* Featured card overrides (Standard Plan) */
+.price-card--featured .price-card__tag {
+    font-size: 0.9rem;
+    font-weight: 700;
+    /* 太字 */
 }
 
-.price-card__features li {
-    padding: 10px 0;
-    border-top: 1px solid #f1f5f9;
-    font-size: 0.9rem;
+.price-card--featured h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    /* 太字 */
+}
+
+.price-card--featured .price-card__cost {
+    font-size: 2.5rem;
+    font-weight: 800;
+    /* 太字 */
+}
+
+.price-card--featured .price-card__features li {
+    font-size: 0.95rem;
+    color: var(--text-main);
 }
 
 @media (max-width: 768px) {
@@ -984,4 +1013,73 @@ img {
     color: #94a3b8;
     border-top: 1px solid #334155;
     padding-top: 20px;
+}
+
+/* Campaign Price Styling */
+.price-card__campaign-area {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.campaign-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.campaign-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.price-strikethrough {
+    text-decoration: line-through;
+    color: var(--text-light);
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.campaign-arrow {
+    font-weight: 700;
+    color: var(--text-main);
+    display: inline-block;
+}
+
+.campaign-highlight {
+    display: flex;
+    align-items: baseline;
+    gap: 3px;
+}
+
+.campaign-text {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #e53e3e;
+    /* 赤文字 */
+}
+
+.campaign-price-red {
+    font-size: 2.0rem;
+    font-weight: 800;
+    color: #e53e3e;
+    /* 赤文字 */
+    line-height: 1;
+}
+
+.campaign-connector {
+    font-weight: 700;
+    color: #e53e3e;
+    /* 赤文字 */
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+.campaign-note {
+    font-size: 0.75rem;
+    color: var(--text-light);
+    margin-top: 5px;
 }
