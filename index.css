@@ -1083,3 +1083,165 @@ img {
     color: var(--text-light);
     margin-top: 5px;
 }
+
+/* Why Cheap Section */
+.why-cheap {
+    background-color: var(--white);
+}
+
+.why-cheap__q-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.why-cheap__q {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.q-label {
+    color: #e53e3e;
+    /* 赤 */
+    margin-right: 5px;
+}
+
+.a-label {
+    color: #22c55e;
+    /* ライトグリーン */
+    margin-right: 5px;
+}
+
+.why-cheap__a-box {
+    background-color: var(--bg-light);
+    padding: 20px 30px;
+    border-radius: 12px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+    max-width: 800px;
+    width: 100%;
+}
+
+.why-cheap__a {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin: 0;
+    text-align: center;
+}
+
+.why-cheap__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    text-align: left;
+}
+
+.why-cheap__item {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    position: relative;
+    border-top: 4px solid var(--secondary-color);
+}
+
+.why-cheap__number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--bg-light);
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 1;
+}
+
+.why-cheap__item h4 {
+    position: relative;
+    z-index: 2;
+    font-size: 1.15rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.why-cheap__item p {
+    position: relative;
+    z-index: 2;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.why-cheap__image {
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #f8fafc;
+}
+
+.why-cheap__image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .why-cheap__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .why-cheap__item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .why-cheap__number {
+        order: 1;
+    }
+
+    .why-cheap__item h4 {
+        order: 2;
+    }
+
+    .why-cheap__item p {
+        order: 3;
+        margin-bottom: 20px;
+    }
+
+    .why-cheap__image {
+        order: 4;
+        margin-bottom: 0;
+    }
+
+    .why-cheap__q {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+    .why-cheap__a {
+        font-size: 1.1rem;
+    }
+
+    .why-cheap__q-box {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .why-cheap__a-box {
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .why-cheap__a {
+        text-align: center;
+    }
+}
