@@ -933,6 +933,88 @@ img {
     box-shadow: var(--shadow);
 }
 
+
+/* FAQ Accordion */
+.faq__list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq__category {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    padding-left: 10px;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.faq__item {
+    margin-bottom: 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: var(--white);
+    transition: all 0.3s ease;
+}
+
+.faq__item[open] {
+    box-shadow: var(--shadow);
+}
+
+.faq__item summary {
+    padding: 20px 25px;
+    list-style: none;
+    cursor: pointer;
+    font-weight: 700;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+    user-select: none;
+}
+
+.faq__item summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Arrow indicator */
+.faq__item summary::after {
+    content: '+';
+    position: absolute;
+    right: 25px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--text-light);
+    transition: transform 0.3s ease;
+}
+
+.faq__item[open] summary::after {
+    content: '−';
+}
+
+.faq__icon {
+    font-size: 1.3rem;
+    flex-shrink: 0;
+}
+
+.faq__answer {
+    padding: 20px 25px 25px 57px;
+    /* Align with text after icon */
+    background-color: #fff9f0;
+    /* 温かみのあるベージュ */
+    line-height: 1.8;
+    color: var(--text-main);
+    border-top: 1px solid #fef3e2;
+}
+
+@media (max-width: 768px) {
+    .faq__answer {
+        padding: 20px;
+    }
+}
+
 @media (max-width: 768px) {
     .profile__content {
         flex-direction: column;
