@@ -370,49 +370,120 @@ img {
     font-size: 1.5rem;
 }
 
-.solution__content {
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 40px;
-    align-items: center;
-}
-
-.solution__highlight {
-    background-color: var(--bg-light);
-    padding: 40px;
-    border-radius: 15px;
-    border-left: 5px solid var(--primary-color);
-}
-
-.solution__highlight h4 {
-    color: var(--primary-color);
+.solution .section-title {
     font-size: 1.5rem;
-    margin-bottom: 20px;
-    line-height: 1.4;
 }
 
-.solution__catch {
-    margin-top: 20px;
-    padding-top: 20px;
-    border-top: 1px dashed #cbd5e1;
-    font-size: 1.1rem;
-    color: var(--primary-color);
+.solution__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    /* 隙間なしで隣接させる */
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-large);
 }
 
-.solution__image img {
+.solution__card {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.solution__card--train {
+    background-color: var(--white);
+    border-right: 1px solid #e2e8f0;
+}
+
+.solution__card--care {
+    background-color: #fdfbf7;
+    /* アイボリー */
+}
+
+.solution__card-image {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.solution__card-image img {
     border-radius: 15px;
     box-shadow: var(--shadow);
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.solution__card-icon {
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+    background: var(--white);
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 700;
+    box-shadow: var(--shadow);
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.solution__card h4 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    line-height: 1.5;
+    min-height: 3.9rem;
+    /* 高さ揃え */
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.solution__card p {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.solution__card strong {
+    background: linear-gradient(transparent 60%, #fcf6ba 60%);
+    padding: 0 4px;
+}
+
+.solution__switch {
+    display: none;
 }
 
 @media (max-width: 768px) {
-    .solution__content {
+    .solution__grid {
         grid-template-columns: 1fr;
+        border-radius: 15px;
     }
 
-    .solution__content {
+    .solution__card {
+        padding: 30px 20px;
+    }
+
+    .solution__card--train {
+        border-right: none;
+        border-bottom: 1px dashed #cbd5e1;
+    }
+
+    .solution__switch {
         display: flex;
-        flex-direction: column-reverse;
-        /* スマホでは画像を先に見せる */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: var(--bg-light);
+        padding: 15px;
+        text-align: center;
+        color: var(--secondary-color);
+        font-weight: 700;
+    }
+
+    .switch-icon {
+        font-size: 2rem;
+        line-height: 1;
+        margin-top: 5px;
     }
 }
 
