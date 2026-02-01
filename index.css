@@ -1124,7 +1124,7 @@ img {
 }
 
 .campaign-box__title {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: var(--secondary-color);
     margin-bottom: 30px;
 }
@@ -1187,6 +1187,11 @@ img {
 
 .footer__info {
     flex: 1;
+}
+
+.footer__info a {
+    color: inherit;
+    text-decoration: none;
 }
 
 .footer__map {
