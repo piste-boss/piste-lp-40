@@ -638,11 +638,37 @@ img {
     font-size: 1.4rem;
 }
 
-.anchor-graph__crown {
+/* 王冠削除に伴いスタイル削除 */
+
+.anchor-graph__bubble {
     position: absolute;
-    top: -40px;
-    font-size: 2rem;
-    animation: bounce 2s infinite;
+    top: -120px;
+    /* さらに上へ移動 */
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    border: 3px solid #f2994a;
+    /* オレンジ枠 */
+    color: #f2994a;
+    font-weight: 800;
+    padding: 8px 12px;
+    border-radius: 8px;
+    white-space: nowrap;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 0.95rem;
+    line-height: 1.3;
+    z-index: 10;
+}
+
+.anchor-graph__bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top: 8px solid #f2994a;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
 }
 
 @keyframes bounce {
@@ -666,25 +692,24 @@ img {
 
 .anchor-graph__comparison-arrow {
     position: absolute;
-    left: 170px;
-    /* General barの右側 */
-    top: 40px;
-    text-align: center;
-    color: var(--secondary-color);
-    font-weight: 700;
-    width: 120px;
-}
-
-.arrow-text {
-    font-size: 0.9rem;
-    background: #fff;
-    padding: 5px;
+    /* 距離: 隙間の幅(60px) + Pisteバーの半分(70px) = 130px */
+    width: 130px;
+    /* 高さ: 350 - 122.5 = 227.5px -> 少し下げるため調整 */
+    height: 200px;
+    top: 0;
+    left: calc(50% - 30px);
+    pointer-events: none;
+    z-index: 5;
 }
 
 .arrow-shape {
-    font-size: 3rem;
-    line-height: 1;
-    margin-top: -10px;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+.arrow-text {
+    display: none;
 }
 
 .comparison__note {
@@ -709,7 +734,12 @@ img {
     }
 
     .anchor-graph__comparison-arrow {
-        left: 120px;
+        /* Mobile: Gap width(40px) + Half Piste Bar(50px) = 90px */
+        width: 90px;
+        /* Mobile height: 300 * 0.65 = 195px -> 少し下げるため調整 */
+        height: 170px;
+        top: 0;
+        left: calc(50% - 20px);
     }
 }
 
