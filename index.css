@@ -1,8 +1,10 @@
 :root {
     --primary-color: #1a365d;
     /* 信頼のネイビー */
-    --secondary-color: #e63946;
-    /* キャンペーン等の強調 */
+    --secondary-color: #E67E22;
+    /* サンセット・オレンジ（単色・テキスト用） */
+    --cta-gradient: linear-gradient(135deg, #F2994A 0%, #EB5757 100%);
+    /* CTAボタン用グラデーション */
     --gold: #bf953f;
     /* ゴールド */
     --gold-check: #fcf6ba;
@@ -105,22 +107,26 @@ img {
 }
 
 .btn--header {
-    background-color: var(--primary-color);
+    background: var(--cta-gradient);
     color: var(--white);
     font-size: 0.9rem;
+    border: none;
+    box-shadow: 0 4px 6px rgba(235, 87, 87, 0.3);
 }
 
 .btn--large {
-    background-color: var(--secondary-color);
+    background: var(--cta-gradient);
     color: var(--white);
     padding: 20px 40px;
     font-size: 1.2rem;
-    box-shadow: 0 10px 15px -3px rgba(230, 57, 70, 0.4);
+    box-shadow: 0 10px 15px -3px rgba(235, 87, 87, 0.4);
+    border: none;
 }
 
 .btn:hover {
     transform: translateY(-2px);
-    opacity: 0.9;
+    opacity: 0.95;
+    box-shadow: 0 15px 20px -3px rgba(235, 87, 87, 0.5);
 }
 
 .btn-subtext {
@@ -136,13 +142,13 @@ img {
     left: 50%;
     transform: translateX(-50%);
     z-index: 1000;
-    background-color: var(--secondary-color);
+    background: var(--cta-gradient);
     color: var(--white);
     padding: 15px 30px;
     border-radius: 50px;
     font-weight: 700;
     text-decoration: none;
-    box-shadow: var(--shadow-large);
+    box-shadow: 0 10px 15px -3px rgba(235, 87, 87, 0.4);
     white-space: nowrap;
     animation: pulse 2s infinite;
 }
@@ -750,7 +756,7 @@ img {
 }
 
 .campaign-box__total {
-    background: var(--gold-gradient);
+    background: var(--cta-gradient);
     color: var(--white);
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     padding: 10px;
@@ -758,6 +764,7 @@ img {
     font-weight: 700;
     font-size: 1.2rem;
     margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(235, 87, 87, 0.3);
 }
 
 /* Footer */
