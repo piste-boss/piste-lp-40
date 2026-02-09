@@ -16,7 +16,7 @@
 ### 1.5 浮遊ボタン（常駐CTA）
 - **仕様**: 画面下部中央に常に表示される浮遊ボタン（Floating Action Button）。
 - **テキスト**: 「無料体験を予約する」
-- **リンク先**: [https://reserva.be/piste/reserve?mode=service_staff&search_evt_no=43eJwzMTazMLQAAARXAT8](https://reserva.be/piste/reserve?mode=service_staff&search_evt_no=43eJwzMTazMLQAAARXAT8)
+- **リンク先**: [https://piste-reserve.netlify.app/lp](https://piste-reserve.netlify.app/lp)
 - **目的**: どのスクロール位置からでも即座に予約アクションへ誘導する。
 
 ### 2. ファーストビュー（FV）
