@@ -45,15 +45,27 @@
         <section class="hero">
             <div class="container hero__container">
                 <h2 class="hero__title">運動はしたい。<br>でも、無理はしたくない。</h2>
+                <p class="hero__subheadline">40〜60代専門・医療提携ジム Piste</p>
                 <p class="hero__text">Piste（ピステ）は、医療機関と連携した<br>「安全なトレーニング」と「不調を癒やすストレッチ」<br>で、40代からの健康な身体づくりをサポートします。
                 </p>
+
+                <!-- CTAボタンを強化 -->
+                <div class="hero__cta-wrapper">
+                    <a href="https://piste-reserve.netlify.app/lp" class="btn btn--hero-primary" target="_blank">
+                        【無料】体験予約はこちら
+                    </a>
+                    <p class="hero__social-proof">
+                        <span class="proof-icon">✓</span> 先月の体験予約: 37名 | 継続率: 92%
+                    </p>
+                </div>
                 <div class="hero__image">
                     <img src="hero_v2.png" alt="笑顔でカウンセリングを受ける様子">
-                    <div class="campaign-badge-hero">
+                    <button class="campaign-badge-hero" id="campaignBadgeBtn" aria-label="キャンペーン詳細を見る">
                         <p class="campaign-badge-hero__deadline">2月28日まで<br>5名限定！</p>
                         <p class="campaign-badge-hero__main">入会金・初月</p>
                         <p class="campaign-badge-hero__price">￥0</p>
-                    </div>
+                        <span class="badge-tap-hint">タップで詳細</span>
+                    </button>
                     <div class="hero__round-badges">
                         <div class="round-badge">
                             <p>医療法人<br>つばさクリニック<br>と提携</p>
@@ -85,6 +97,45 @@
                         </ul>
                         <p class="intro__conclusion">そのお悩み、Pisteが全て解決します！</p>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 早期FAQ（不安解消） -->
+        <section class="faq-early section">
+            <div class="container">
+                <h3 class="section-title">よくある不安にお答えします</h3>
+                <div class="faq__list">
+                    <!-- Item 1 - 食事制限 -->
+                    <details class="faq__item" open>
+                        <summary class="faq__question">
+                            <span class="faq__icon">🥗</span>厳しい食事制限はありますか?
+                        </summary>
+                        <div class="faq__answer">
+                            「一生続けられない制限」は提案しません。
+                            糖質を完全に抜くような極端な制限は、リバウンドの元です。Pisteでは、医学的な視点(血液検査データなど)に基づき、「何を食べるべきか」というプラスの栄養指導を行います。お酒や甘い物を楽しむための調整方法もお伝えしています。
+                        </div>
+                    </details>
+                    <!-- Item 2 - 体力 -->
+                    <details class="faq__item">
+                        <summary class="faq__question">
+                            <span class="faq__icon">👟</span>運動は学生時代以来です。体力が全くなくても大丈夫ですか?
+                        </summary>
+                        <div class="faq__answer">
+                            はい、むしろ運動不足の方こそ大歓迎です。
+                            Pisteの会員様の9割は、運動未経験またはブランクがある状態でスタートされています。いきなり重い物を持ったり、息が上がるような激しい運動はさせません。まずはストレッチや軽い負荷で「身体を動かす心地よさ」を感じていただくことから始めます。
+                        </div>
+                    </details>
+                    <!-- Item 3 - 腰痛 -->
+                    <details class="faq__item">
+                        <summary class="faq__question">
+                            <span class="faq__icon">🩹</span>腰痛や肩こりがあります。悪化しないか心配です。
+                        </summary>
+                        <div class="faq__answer">
+                            「痛い」と感じる日は、トレーニングをしません。
+                            Pisteは「整える」ことも重視しています。痛みや違和感がある日は、無理に動かさず、トレーナーによる「パーソナルストレッチ」やコンディショニングにメニューを変更します。整体に行く感覚で、メンテナンスにいらしてください。
+                        </div>
+                    </details>
                 </div>
             </div>
         </section>
@@ -340,20 +391,10 @@
         <!-- よくある質問 -->
         <section class="faq section">
             <div class="container">
-                <h3 class="section-title">よくある質問</h3>
+                <h3 class="section-title">その他のよくある質問</h3>
                 <div class="faq__list">
                     <h4 class="faq__category">【トレーニング・体力について】</h4>
                     <!-- Item 1 -->
-                    <details class="faq__item" open>
-                        <summary class="faq__question">
-                            <span class="faq__icon">👟</span>運動は学生時代以来です。体力が全くなくても大丈夫ですか？
-                        </summary>
-                        <div class="faq__answer">
-                            はい、むしろ運動不足の方こそ大歓迎です。
-                            Pisteの会員様の9割は、運動未経験またはブランクがある状態でスタートされています。いきなり重い物を持ったり、息が上がるような激しい運動はさせません。まずはストレッチや軽い負荷で「身体を動かす心地よさ」を感じていただくことから始めます。
-                        </div>
-                    </details>
-                    <!-- Item 2 -->
                     <details class="faq__item">
                         <summary class="faq__question">
                             <span class="faq__icon">⏱</span>本当に「1回20分」で効果があるのですか？
@@ -362,60 +403,39 @@
                             はい、科学的に「量より質」を重視しています。
                             だらだらと60分動くよりも、正しいフォームと適切な負荷で20分集中する方が、筋肉への効果が高いことがデータで実証されています。忙しい日常の隙間で、効率よく身体を変えていきましょう。
                         </div>
-                    </details>
-                    <!-- Item 3 -->
-                    <details class="faq__item">
-                        <summary class="faq__question">
-                            <span class="faq__icon">🥗</span>厳しい食事制限はありますか？
-                        </summary>
-                        <div class="faq__answer">
-                            「一生続けられない制限」は提案しません。
-                            糖質を完全に抜くような極端な制限は、リバウンドの元です。Pisteでは、医学的な視点（血液検査データなど）に基づき、「何を食べるべきか」というプラスの栄養指導を行います。お酒や甘い物を楽しむための調整方法もお伝えしています。
-                        </div>
-                    </details>
 
-                    <h4 class="faq__category" style="margin-top: 40px;">【身体の不調・健康について】</h4>
-                    <!-- Item 4 -->
-                    <details class="faq__item">
-                        <summary class="faq__question">
-                            <span class="faq__icon">🩹</span>腰痛や肩こりがあります。悪化しないか心配です。
-                        </summary>
-                        <div class="faq__answer">
-                            「痛い」と感じる日は、トレーニングをしません。
-                            Pisteは「整える」ことも重視しています。痛みや違和感がある日は、無理に動かさず、トレーナーによる「パーソナルストレッチ」やコンディショニングにメニューを変更します。整体に行く感覚で、メンテナンスにいらしてください。
-                        </div>
-                    </details>
-                    <!-- Item 5 -->
-                    <details class="faq__item">
-                        <summary class="faq__question">
-                            <span class="faq__icon">🏥</span>健康診断で「高血圧」や「血糖値」を指摘されました。通えますか？
-                        </summary>
-                        <div class="faq__answer">
-                            ぜひご相談ください。医療連携による安全なプログラムを組みます。
-                            提携している「つばさクリニック（高浜市）」と連携し、医師の判断を仰ぎながら、リスクを管理した安全な運動メニューを作成します。自己流の運動は危険な場合もありますので、プロにお任せください。
-                        </div>
-                    </details>
 
-                    <h4 class="faq__category" style="margin-top: 40px;">【システム・環境について】</h4>
-                    <!-- Item 6 -->
-                    <details class="faq__item">
-                        <summary class="faq__question">
-                            <span class="faq__icon">👥</span>若い人ばかりで、浮いてしまわないか不安です…。
-                        </summary>
-                        <div class="faq__answer">
-                            ご安心ください。40代・50代の方から70代の方までたくさんご利用いただいています。
-                        </div>
-                    </details>
-                    <!-- Item 7 -->
-                    <details class="faq__item">
-                        <summary class="faq__question">
-                            <span class="faq__icon">👕</span>必要な持ち物はありますか？
-                        </summary>
-                        <div class="faq__answer">
-                            動きやすい服装なら何でもOKです。
-                            高価なウェアを揃える必要はありません。Tシャツやジャージなど、動きやすい服装と室内シューズをお持ちください。お水はウォーターサーバーを無料でご利用いただけますので水筒、ボトルをご持参ください。
-                        </div>
-                    </details>
+                        <h4 class="faq__category" style="margin-top: 40px;">【身体の不調・健康について】</h4>
+                        <details class="faq__item">
+                            <summary class="faq__question">
+                                <span class="faq__icon">🏥</span>健康診断で「高血圧」や「血糖値」を指摘されました。通えますか？
+                            </summary>
+                            <div class="faq__answer">
+                                ぜひご相談ください。医療連携による安全なプログラムを組みます。
+                                提携している「つばさクリニック（高浜市）」と連携し、医師の判断を仰ぎながら、リスクを管理した安全な運動メニューを作成します。自己流の運動は危険な場合もありますので、プロにお任せください。
+                            </div>
+                        </details>
+
+                        <h4 class="faq__category" style="margin-top: 40px;">【システム・環境について】</h4>
+                        <!-- Item 6 -->
+                        <details class="faq__item">
+                            <summary class="faq__question">
+                                <span class="faq__icon">👥</span>若い人ばかりで、浮いてしまわないか不安です…。
+                            </summary>
+                            <div class="faq__answer">
+                                ご安心ください。40代・50代の方から70代の方までたくさんご利用いただいています。
+                            </div>
+                        </details>
+                        <!-- Item 7 -->
+                        <details class="faq__item">
+                            <summary class="faq__question">
+                                <span class="faq__icon">👕</span>必要な持ち物はありますか？
+                            </summary>
+                            <div class="faq__answer">
+                                動きやすい服装なら何でもOKです。
+                                高価なウェアを揃える必要はありません。Tシャツやジャージなど、動きやすい服装と室内シューズをお持ちください。お水はウォーターサーバーを無料でご利用いただけますので水筒、ボトルをご持参ください。
+                            </div>
+                        </details>
                 </div>
             </div>
         </section>
@@ -477,6 +497,53 @@
             <p class="footer__copyright">&copy; Piste. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <!-- キャンペーン詳細モーダル -->
+    <div id="campaignModal" class="modal" aria-hidden="true">
+        <div class="modal__overlay" id="modalOverlay"></div>
+        <div class="modal__content">
+            <button class="modal__close" id="modalClose" aria-label="閉じる">×</button>
+            <h3 class="modal__title">🎉 2月28日までの限定キャンペーン</h3>
+            <div class="modal__body">
+                <p class="modal__highlight">通常 21,000円 → 今なら <strong>0円!</strong></p>
+                <ul class="modal__breakdown">
+                    <li><span class="item-label">入会金:</span> <del>11,000円</del> → <strong class="price-zero">0円</strong>
+                    </li>
+                    <li><span class="item-label">初月会費:</span> <del>10,000円</del> → <strong
+                            class="price-zero">0円</strong></li>
+                </ul>
+                <p class="modal__note">※先着5名様限定。定員に達し次第、予告なく終了いたします。</p>
+                <a href="https://piste-reserve.netlify.app/lp" class="btn btn--modal-cta" target="_blank">
+                    今すぐ無料体験を予約する
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // モーダル制御
+        const modal = document.getElementById('campaignModal');
+        const openBtn = document.getElementById('campaignBadgeBtn');
+        const closeBtn = document.getElementById('modalClose');
+        const overlay = document.getElementById('modalOverlay');
+
+        function openModal() {
+            modal.setAttribute('aria-hidden', 'false');
+            modal.classList.add('modal--active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            modal.setAttribute('aria-hidden', 'true');
+            modal.classList.remove('modal--active');
+            document.body.style.overflow = '';
+        }
+
+        openBtn.addEventListener('click', openModal);
+        closeBtn.addEventListener('click', closeModal);
+        overlay.addEventListener('click', closeModal);
+    </script>
+
 </body>
 
 </html>
