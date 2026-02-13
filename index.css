@@ -195,7 +195,7 @@ img {
 /* Hero */
 .hero {
     background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
-    padding: 60px 0;
+    padding: 60px 0 20px;
 }
 
 .hero__container {
@@ -288,7 +288,7 @@ img {
     /* バッジをはみ出させるため */
     box-shadow: var(--shadow-large);
     position: relative;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
     /* バッジのスペース確保 */
 }
 
@@ -454,7 +454,7 @@ img {
     align-items: flex-start;
     gap: 20px;
     padding: 30px 16px;
-    background: #FFFFFF;
+    background: transparent;
     border-top: none;
     flex-wrap: wrap;
 }
@@ -523,25 +523,24 @@ img {
     }
 
     .trust-badge-main {
-        font-size: 0.75rem;
-        line-height: 1.25;
+        font-size: 0.8rem;
+        line-height: 1.3;
+        width: 100%;
+        text-align: center;
     }
 
     .trust-badge-sub {
-        font-size: 0.55rem;
-        letter-spacing: -0.5px;
-        transform: scale(0.95);
-        margin-top: 1px;
+        display: none;
     }
 }
 
 /* Scroll Hint Animation */
 .scroll-hint {
     text-align: center;
-    padding: 12px 0 8px;
+    padding: 10px 0;
     color: #FF6B35;
-    font-size: 13px;
-    font-weight: 600;
+    font-size: 1.8rem;
+    font-weight: 700;
 }
 
 .scroll-hint-arrow {
@@ -570,6 +569,7 @@ img {
 
 /* Intro */
 .intro {
+    padding-top: 30px;
     background-color: var(--bg-light);
 }
 
