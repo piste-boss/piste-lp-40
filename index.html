@@ -30,7 +30,8 @@
 <body>
     <!-- 浮遊ボタン -->
     <a href="https://piste-reserve.netlify.app/lp" class="floating-cta" target="_blank">
-        無料体験を予約する
+        <span class="cta-main-text">【無料】体験を予約する</span>
+        <span class="cta-microcopy">同世代の方と一緒 ・ しつこい勧誘なし</span>
     </a>
 
     <header class="header">
@@ -55,11 +56,12 @@
                         【無料】体験予約はこちら
                     </a>
                     <p class="hero__social-proof">
-                        <span class="proof-icon">✓</span> 先月の体験予約: 13名 | 継続率: 92%
+                        <span class="proof-icon">✓</span> 同世代の方と一緒 ・ しつこい勧誘は一切なし | 先月の体験予約: 13名
                     </p>
                 </div>
                 <div class="hero__image">
-                    <img src="hero_v2.png" alt="笑顔でカウンセリングを受ける様子">
+                    <img src="hero_v2.png" alt="笑顔でカウンセリングを受ける様子" class="lightbox-target"
+                        data-lightbox-caption="笑顔でカウンセリングを受ける様子">
                     <button class="campaign-badge-hero" id="campaignBadgeBtn" aria-label="キャンペーン詳細を見る">
                         <p class="campaign-badge-hero__deadline">2月28日まで<br>5名限定！</p>
                         <p class="campaign-badge-hero__main">入会金・初月</p>
@@ -68,34 +70,58 @@
                     </button>
 
                 </div>
-                <section class="trust-badges">
-                    <div class="trust-badge-item">
-                        <div class="trust-badge-main">医療法人<br>つばさクリニック<br>と提携</div>
+                <div class="voice-carousel" aria-label="利用者の声">
+                    <div class="voice-carousel__track" aria-live="polite">
+                        <div class="voice-slide voice-slide--active">
+                            <p class="voice-slide__text">「58歳、膝の手術後でも<br>安心して通えています」</p>
+                            <p class="voice-slide__author">58歳 男性 会社員</p>
+                        </div>
+                        <div class="voice-slide">
+                            <p class="voice-slide__text">「高血圧を指摘されていましたが、<br>医師連携で安心です」</p>
+                            <p class="voice-slide__author">52歳 女性 主婦</p>
+                        </div>
+                        <div class="voice-slide">
+                            <p class="voice-slide__text">「半年続いています。<br>整体感覚で通えるのが良い」</p>
+                            <p class="voice-slide__author">61歳 男性 自営業</p>
+                        </div>
                     </div>
-                    <div class="trust-badge-item">
-                        <div class="trust-badge-main">1年継続率<br>92%</div>
+                    <div class="voice-dots">
+                        <button class="voice-dot voice-dot--active" aria-label="スライド1"></button>
+                        <button class="voice-dot" aria-label="スライド2"></button>
+                        <button class="voice-dot" aria-label="スライド3"></button>
                     </div>
-                    <div class="trust-badge-item">
-                        <div class="trust-badge-main">40〜60代の<br>ためのパーソナル</div>
-                    </div>
-                </section>
+                    <p class="voice-scroll-hint">↓ 同世代の方の体験を見る</p>
+                </div>
             </div>
         </section>
 
 
+
+        <div class="quick-diagnosis">
+            <p class="diagnosis-title">あなたに合った運動を10秒で診断</p>
+            <p class="diagnosis-question">Q. 一番気になることは？</p>
+            <div class="diagnosis-buttons">
+                <button class="diagnosis-btn" data-target="#intro">体力に自信がない</button>
+                <button class="diagnosis-btn" data-target="#reasons">膝や腰に不安がある</button>
+                <button class="diagnosis-btn" data-target="#price">続けられるか心配</button>
+            </div>
+        </div>
 
         <div class="scroll-hint">
             <span class="scroll-hint-arrow">↓</span> あなたに合ったプランを見る
         </div>
 
         <!-- 共感・問題提起 -->
-        <section class="intro section">
+        <section class="intro section" id="intro">
             <div class="container">
                 <h3 class="section-title">こんなお悩み、ありませんか？</h3>
 
                 <div class="intro__content">
                     <div class="intro__image">
-                        <img src="intro_v2.png" alt="肩の不調を感じる様子">
+                        <img src="intro_v2.png" alt="肩の不調を感じる様子" class="lightbox-target"
+                            data-lightbox-caption="肩の不調を感じる様子">
+                        <p class="lightbox-hint"><span class="lightbox-hint--touch">タップで拡大</span><span
+                                class="lightbox-hint--mouse">クリックで拡大</span></p>
                     </div>
                     <div class="intro__text">
                         <ul class="intro__list">
@@ -124,6 +150,7 @@
                         <div class="faq__answer">
                             「一生続けられない制限」は提案しません。
                             糖質を完全に抜くような極端な制限は、リバウンドの元です。Pisteでは、医学的な視点(血液検査データなど)に基づき、「何を食べるべきか」というプラスの栄養指導を行います。お酒や甘い物を楽しむための調整方法もお伝えしています。
+                            <a href="https://piste-reserve.netlify.app/lp" class="faq__inline-cta" target="_blank">→ 栄養指導も含めた無料体験はこちら</a>
                         </div>
                     </details>
                     <!-- Item 2 - 体力 -->
@@ -134,6 +161,7 @@
                         <div class="faq__answer">
                             はい、むしろ運動不足の方こそ大歓迎です。
                             Pisteの会員様の9割は、運動未経験またはブランクがある状態でスタートされています。いきなり重い物を持ったり、息が上がるような激しい運動はさせません。まずはストレッチや軽い負荷で「身体を動かす心地よさ」を感じていただくことから始めます。
+                            <a href="https://piste-reserve.netlify.app/lp" class="faq__inline-cta" target="_blank">→ 運動未経験の方も安心。まずは無料体験を</a>
                         </div>
                     </details>
                     <!-- Item 3 - 腰痛 -->
@@ -144,9 +172,21 @@
                         <div class="faq__answer">
                             「痛い」と感じる日は、トレーニングをしません。
                             Pisteは「整える」ことも重視しています。痛みや違和感がある日は、無理に動かさず、トレーナーによる「パーソナルストレッチ」やコンディショニングにメニューを変更します。整体に行く感覚で、メンテナンスにいらしてください。
+                            <a href="https://piste-reserve.netlify.app/lp" class="faq__inline-cta" target="_blank">→ メンテナンス感覚の無料体験を予約する</a>
                         </div>
                     </details>
                 </div>
+            </div>
+        </section>
+
+        <!-- 簡易価格ティーザー -->
+        <section class="price-teaser section">
+            <div class="container u-text-center">
+                <p class="price-teaser__label">大手パーソナルジムの <strong>1/10</strong> の価格</p>
+                <p class="price-teaser__price">月額 <span class="price-teaser__amount">7,500</span><span
+                        class="price-teaser__unit">円〜</span></p>
+                <p class="price-teaser__features">通い放題 ・ 医療提携 ・ 食事指導付き</p>
+                <a href="#price" class="btn btn--price-teaser">プラン詳細を見る ↓</a>
             </div>
         </section>
 
@@ -158,7 +198,8 @@
                     <!-- ① 鍛える -->
                     <div class="solution__card solution__card--train">
                         <div class="solution__card-image">
-                            <img src="solution_train_notebook.png" alt="データに基づいた安全なトレーニング">
+                            <img src="solution_train_notebook.png" alt="データに基づいた安全なトレーニング"
+                                class="lightbox-target" data-lightbox-caption="データに基づいた安全なトレーニング">
                             <div class="solution__card-icon">💪 鍛える</div>
                         </div>
                         <div class="solution__card-content">
@@ -179,7 +220,8 @@
                     <!-- ② 整える -->
                     <div class="solution__card solution__card--care">
                         <div class="solution__card-image">
-                            <img src="stretch_v2.png" alt="リラックスしたパーソナルストレッチ">
+                            <img src="stretch_v2.png" alt="リラックスしたパーソナルストレッチ"
+                                class="lightbox-target" data-lightbox-caption="リラックスしたパーソナルストレッチ">
                             <div class="solution__card-icon">🌿 整える</div>
                         </div>
                         <div class="solution__card-content">
@@ -194,12 +236,14 @@
         </section>
 
         <!-- 選ばれる3つの理由 -->
-        <section class="reasons section">
+        <section class="reasons section" id="reasons">
             <div class="container">
                 <h3 class="section-title">選ばれる3つの理由</h3>
                 <div class="reasons__grid">
                     <div class="reason-card">
-                        <img src="reason_doctor.png" alt="医師と笑顔で握手するトレーナー" class="reason-card__image">
+                        <img src="reason_doctor.png" alt="医師と笑顔で握手するトレーナー"
+                            class="reason-card__image lightbox-target"
+                            data-lightbox-caption="医師と笑顔で握手するトレーナー">
                         <div class="reason-card__content">
                             <div class="reason-card__number">01</div>
                             <h4>医師と連携した<br>「医療×フィットネス」</h4>
@@ -207,7 +251,9 @@
                         </div>
                     </div>
                     <div class="reason-card">
-                        <img src="reason_science.png" alt="タブレットでデータを説明するトレーナー" class="reason-card__image">
+                        <img src="reason_science.png" alt="タブレットでデータを説明するトレーナー"
+                            class="reason-card__image lightbox-target"
+                            data-lightbox-caption="タブレットでデータを説明するトレーナー">
                         <div class="reason-card__content">
                             <div class="reason-card__number">02</div>
                             <h4>「感覚」に頼らない、<br>科学的アプローチ</h4>
@@ -215,7 +261,9 @@
                         </div>
                     </div>
                     <div class="reason-card">
-                        <img src="reason_open.png" alt="笑顔でジムに入店する会員様" class="reason-card__image">
+                        <img src="reason_open.png" alt="笑顔でジムに入店する会員様"
+                            class="reason-card__image lightbox-target"
+                            data-lightbox-caption="笑顔でジムに入店する会員様">
                         <div class="reason-card__content">
                             <div class="reason-card__number">03</div>
                             <h4>継続しやすい<br>「通い放題」システム</h4>
@@ -249,6 +297,7 @@
                 <div class="u-text-center">
                     <a href="https://piste-reserve.netlify.app/lp" class="btn btn--large"
                         target="_blank">体調に合わせた無料体験を予約する</a>
+                    <p class="cta-microcopy-block">同世代の方と一緒 ・ しつこい勧誘は一切ありません</p>
                 </div>
             </div>
         </section>
@@ -401,7 +450,8 @@
                 <h3 class="section-title">トレーナー紹介</h3>
                 <div class="profile__content">
                     <div class="profile__image">
-                        <img src="trainer_real.jpg" alt="トレーナー石川卓">
+                        <img src="trainer_real.jpg" alt="トレーナー石川卓" class="lightbox-target"
+                            data-lightbox-caption="トレーナー石川卓">
                         <div class="profile__meta">
                             <p class="profile__name">石川 卓（すぐる） <span class="profile__title">Piste 代表</span></p>
                             <p class="profile__history">岐阜大学大学院工学部卒 → 愛知製鋼 → Piste設立</p>
@@ -439,6 +489,7 @@
                         <div class="faq__answer">
                             はい、科学的に「量より質」を重視しています。
                             だらだらと60分動くよりも、正しいフォームと適切な負荷で20分集中する方が、筋肉への効果が高いことがデータで実証されています。忙しい日常の隙間で、効率よく身体を変えていきましょう。
+                            <a href="https://piste-reserve.netlify.app/lp" class="faq__inline-cta" target="_blank">→ まずは20分の無料体験で効果を実感</a>
                         </div>
                     </details>
 
@@ -450,6 +501,7 @@
                         <div class="faq__answer">
                             ぜひご相談ください。医療連携による安全なプログラムを組みます。
                             提携している「つばさクリニック（高浜市）」と連携し、医師の判断を仰ぎながら、リスクを管理した安全な運動メニューを作成します。自己流の運動は危険な場合もありますので、プロにお任せください。
+                            <a href="https://piste-reserve.netlify.app/lp" class="faq__inline-cta" target="_blank">→ 医師連携の安心環境を、まずは体験してみませんか？</a>
                         </div>
                     </details>
 
@@ -461,6 +513,7 @@
                         </summary>
                         <div class="faq__answer">
                             ご安心ください。40代・50代の方から70代の方までたくさんご利用いただいています。
+                            <a href="https://piste-reserve.netlify.app/lp" class="faq__inline-cta" target="_blank">→ 同世代の方と一緒に、まずは無料体験を</a>
                         </div>
                     </details>
                     <!-- Item 7 -->
@@ -471,9 +524,25 @@
                         <div class="faq__answer">
                             動きやすい服装なら何でもOKです。
                             高価なウェアを揃える必要はありません。Tシャツやジャージなど、動きやすい服装と室内シューズをお持ちください。お水はウォーターサーバーを無料でご利用いただけますので水筒、ボトルをご持参ください。
+                            <a href="https://piste-reserve.netlify.app/lp" class="faq__inline-cta" target="_blank">→ まずは雰囲気を見てみませんか？【無料体験を予約】</a>
                         </div>
                     </details>
                 </div>
+            </div>
+        </section>
+
+        <!-- LINE相談セクション -->
+        <section class="line-cta section">
+            <div class="container u-text-center">
+                <p class="line-cta__lead">まだ迷っている方へ</p>
+                <p class="line-cta__text">
+                    「もう少し考えたい」「聞きたいことがある」<br>
+                    そんな方は、お気軽にLINEでご相談ください。
+                </p>
+                <a href="https://lin.ee/LizXCv6" class="btn btn--line" target="_blank" rel="noopener">
+                    LINEで気軽に相談する
+                </a>
+                <p class="line-cta__note">トレーナーが直接お答えします ・ しつこい勧誘は一切ありません</p>
             </div>
         </section>
 
@@ -500,7 +569,7 @@
                 <div class="u-text-center">
                     <a href="https://piste-reserve.netlify.app/lp" class="btn btn--large"
                         target="_blank">体調に合わせた無料体験を予約する</a>
-
+                    <p class="cta-microcopy-block">同世代の方と一緒 ・ しつこい勧誘は一切ありません</p>
                 </div>
             </div>
         </section>
@@ -557,6 +626,16 @@
         </div>
     </div>
 
+    <!-- 画像Lightboxモーダル -->
+    <div id="lightboxModal" class="lightbox" aria-hidden="true">
+        <div class="lightbox__overlay" id="lightboxOverlay"></div>
+        <div class="lightbox__content">
+            <button class="lightbox__close" id="lightboxClose" aria-label="閉じる">&times;</button>
+            <img class="lightbox__image" id="lightboxImage" src="" alt="">
+            <p class="lightbox__caption" id="lightboxCaption"></p>
+        </div>
+    </div>
+
     <script>
         // モーダル制御
         const modal = document.getElementById('campaignModal');
@@ -579,6 +658,115 @@
         openBtn.addEventListener('click', openModal);
         closeBtn.addEventListener('click', closeModal);
         overlay.addEventListener('click', closeModal);
+
+        // カルーセル制御
+        (function () {
+            const slides = document.querySelectorAll('.voice-slide');
+            const dots = document.querySelectorAll('.voice-dot');
+            let current = 0;
+            let autoPlayTimer = null;
+
+            function showSlide(index) {
+                slides.forEach(function (s) { s.classList.remove('voice-slide--active'); });
+                dots.forEach(function (d) { d.classList.remove('voice-dot--active'); });
+                slides[index].classList.add('voice-slide--active');
+                dots[index].classList.add('voice-dot--active');
+                current = index;
+            }
+
+            function nextSlide() {
+                showSlide((current + 1) % slides.length);
+            }
+
+            function startAutoPlay() {
+                if (autoPlayTimer) return;
+                autoPlayTimer = setInterval(nextSlide, 3000);
+            }
+
+            function pauseAutoPlay() {
+                clearInterval(autoPlayTimer);
+                autoPlayTimer = null;
+                setTimeout(startAutoPlay, 3000);
+            }
+
+            dots.forEach(function (dot, i) {
+                dot.addEventListener('click', function () {
+                    showSlide(i);
+                    pauseAutoPlay();
+                });
+            });
+
+            var carousel = document.querySelector('.voice-carousel');
+            if (carousel) {
+                carousel.addEventListener('touchstart', pauseAutoPlay, { passive: true });
+            }
+
+            startAutoPlay();
+        })();
+
+        // 30秒診断スムーズスクロール
+        document.querySelectorAll('.diagnosis-btn').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                var target = document.querySelector(this.getAttribute('data-target'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Lightbox制御
+        (function () {
+            var lbModal = document.getElementById('lightboxModal');
+            var lbImage = document.getElementById('lightboxImage');
+            var lbCaption = document.getElementById('lightboxCaption');
+            var lbClose = document.getElementById('lightboxClose');
+            var lbOverlay = document.getElementById('lightboxOverlay');
+
+            function openLightbox(src, alt, caption) {
+                lbImage.src = src;
+                lbImage.alt = alt;
+                lbCaption.textContent = caption;
+                lbModal.setAttribute('aria-hidden', 'false');
+                lbModal.classList.add('lightbox--active');
+                document.body.style.overflow = 'hidden';
+                lbClose.focus();
+            }
+
+            function closeLightbox() {
+                lbModal.setAttribute('aria-hidden', 'true');
+                lbModal.classList.remove('lightbox--active');
+                document.body.style.overflow = '';
+            }
+
+            document.querySelectorAll('img.lightbox-target').forEach(function (img) {
+                img.addEventListener('click', function () {
+                    openLightbox(img.src, img.alt, img.dataset.lightboxCaption || img.alt);
+                });
+            });
+
+            lbClose.addEventListener('click', closeLightbox);
+            lbOverlay.addEventListener('click', closeLightbox);
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && lbModal.classList.contains('lightbox--active')) {
+                    closeLightbox();
+                }
+            });
+        })();
+
+        // スクロールヒント非表示
+        var scrollHintEl = document.querySelector('.scroll-hint');
+        var voiceScrollHintEl = document.querySelector('.voice-scroll-hint');
+        window.addEventListener('scroll', function () {
+            var hidden = window.scrollY > 100;
+            if (scrollHintEl) {
+                scrollHintEl.style.opacity = hidden ? '0' : '1';
+                scrollHintEl.style.pointerEvents = hidden ? 'none' : '';
+            }
+            if (voiceScrollHintEl) {
+                voiceScrollHintEl.style.opacity = hidden ? '0' : '1';
+                voiceScrollHintEl.style.pointerEvents = hidden ? 'none' : '';
+            }
+        }, { passive: true });
     </script>
 
 </body>
