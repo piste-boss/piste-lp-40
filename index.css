@@ -186,6 +186,30 @@ img {
     }
 }
 
+/* Urgent Banner */
+.urgent-banner {
+    background: linear-gradient(135deg, #dc2626, #b91c1c);
+    color: var(--white);
+    text-align: center;
+    padding: 10px 16px;
+    position: sticky;
+    top: 0;
+    z-index: 101;
+}
+
+.urgent-banner__text {
+    font-size: 0.85rem;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+
+@media (max-width: 600px) {
+    .urgent-banner__text {
+        font-size: 0.75rem;
+    }
+}
+
 /* Header */
 .header {
     background-color: var(--white);
